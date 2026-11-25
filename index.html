@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurePass | Password Generator</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <main class="terminal-card">
+
+    <div class="top-label">
+      <span class="status-dot"></span>
+      SYSTEM ONLINE
+    </div>
+
+    <div class="title-section">
+      <div class="icon-box">⌘</div>
+      <h1>Secure<span>Pass.</span></h1>
+      <p>Generate strong and secure passwords instantly.</p>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="control-group">
+      <div class="slider-header">
+        <label for="pass-length">PASSWORD LENGTH</label>
+        <span id="length-val">12</span>
+      </div>
+
+      <input type="range" id="pass-length" min="8" max="32" value="12">
+
+      <div class="range-labels">
+        <span>8 CHARACTERS</span>
+        <span>32 CHARACTERS</span>
+      </div>
+    </div>
+
+    <div class="options-header">
+      <span>CHARACTER OPTIONS</span>
+      <span class="optional-label">CUSTOMIZE</span>
+    </div>
+
+    <div class="checkbox-group">
+      <label class="option-card">
+        <input type="checkbox" id="include-upper">
+        <span class="custom-check"></span>
+        <span class="option-text">Uppercase Letters</span>
+        <span class="option-code">ABC</span>
+      </label>
+
+      <label class="option-card">
+        <input type="checkbox" id="include-lower">
+        <span class="custom-check"></span>
+        <span class="option-text">Lowercase Letters</span>
+        <span class="option-code">abc</span>
+      </label>
+
+      <label class="option-card">
+        <input type="checkbox" id="include-numbers">
+        <span class="custom-check"></span>
+        <span class="option-text">Numbers</span>
+        <span class="option-code">123</span>
+      </label>
+
+      <label class="option-card">
+        <input type="checkbox" id="include-symbols">
+        <span class="custom-check"></span>
+        <span class="option-text">Symbols</span>
+        <span class="option-code">!@#</span>
+      </label>
+    </div>
+
+    <button id="generate-btn">
+      <span>✦</span> Generate Secure Password
+      <span class="button-arrow">→</span>
+    </button>
+
+    <div class="terminal-display">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <span class="terminal-title">SECURE_TERMINAL</span>
+        <span class="terminal-live">LIVE</span>
+      </div>
+
+      <div class="terminal-body">
+        <span class="terminal-prefix">root@securepass:~$</span>
+        <div class="password-line">
+          <span id="password-output" class="weak-pass">***********</span>
+          <span class="cursor">█</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="strength-indicator" class="strength-banner warning">
+      <span class="strength-icon">!</span>
+      Status: System Vulnerable (Short Key)
+    </div>
+
+    <div class="footer">
+      <span>SECUREPASS GENERATOR</span>
+      <span>ENCRYPTED ENVIRONMENT <span class="footer-dot">●</span></span>
+    </div>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
